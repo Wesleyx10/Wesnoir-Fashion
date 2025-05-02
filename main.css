@@ -1,0 +1,827 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-color: #6e806a;
+  --main-font: poppins;
+  --content-bgcolor: #f0efed;
+  --main-bg-color: #e5e1d8;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: var(--main-color);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--main-font);
+  padding: 0.3rem 0rem;
+  color: white;
+  font-size: 13px;
+  gap: 0.4rem;
+}
+header a {
+  color: white;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2.7rem;
+  padding: 1rem;
+  font-family: var(--main-font);
+  position: sticky;
+  top: 0;
+  background-color: white;
+  justify-content: center;
+  z-index: 1;
+}
+.nav .bars {
+  display: none;
+}
+.nav #logo {
+  font-weight: 900;
+  font-size: 30px;
+}
+.nav .links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.nav .links select {
+  border: none;
+  outline: none;
+  font-size: 15px;
+  width: 18%;
+}
+.nav .links a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+}
+.nav #input {
+  background-color: var(--content-bgcolor);
+  padding: 0.6rem 12rem 0.6rem 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  border-radius: 20px;
+  color: #bcbcbc;
+}
+.nav #input input {
+  border: none;
+  outline: none;
+  background-color: var(--content-bgcolor);
+}
+.nav #input input::-moz-placeholder {
+  color: #bcbcbc;
+}
+.nav #input input::placeholder {
+  color: #bcbcbc;
+}
+.nav #cart {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.nav #cart a {
+  font-size: 23px;
+  color: black;
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+}
+.contents .head-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--content-bgcolor);
+  gap: 10rem;
+}
+.contents .head-content #headtext {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-family: var(--main-font);
+}
+.contents .head-content #headtext #find {
+  font-weight: 900;
+  font-size: 45px;
+  line-height: 1;
+}
+.contents .head-content #headtext p {
+  font-size: 15px;
+  font-weight: 300;
+}
+.contents .head-content #headtext a {
+  background-color: var(--main-color);
+  width: 15%;
+  color: white;
+  text-decoration: none;
+  padding: 0.6rem 2rem;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.contents .head-content #headtext #rating {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+}
+.contents .head-content #headtext #rating span {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem 0rem 0rem;
+  border-right: 1.4px solid #dddbdc;
+  font-size: 25px;
+  font-weight: 600;
+}
+.contents .head-content #headtext #rating span small {
+  font-size: 15px;
+  font-weight: 300;
+}
+.contents .head-content img {
+  width: 400px;
+}
+.contents .brands {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5.8rem;
+  padding: 1.5rem;
+  background-color: var(--main-color);
+}
+.contents .brands span {
+  font-size: 40px;
+  color: white;
+  font-family: var(--main-font);
+  font-weight: 300;
+}
+
+.other-content {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.other-content .arrivals {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.other-content .arrivals h1 {
+  font-weight: 800;
+  font-family: var(--main-font);
+  font-size: 35px;
+}
+.other-content .arrivals .prod {
+  display: flex;
+  align-items: center;
+  font-family: var(--main-font);
+  gap: 1.8rem;
+}
+.other-content .arrivals .prod #products {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.other-content .arrivals .prod #products a {
+  border-radius: 20px;
+}
+.other-content .arrivals .prod #products a img {
+  width: 250px;
+  border-radius: 20px;
+}
+.other-content .arrivals .prod #products span {
+  font-weight: 500;
+  font-size: 15px;
+}
+.other-content .arrivals .prod #products small {
+  font-weight: 530;
+  font-size: 18px;
+}
+.other-content .arrivals .prod #product1 {
+  display: flex;
+  flex-direction: column;
+}
+.other-content .arrivals .prod #product1 a img {
+  width: 250px;
+  border-radius: 20px;
+  height: 253px;
+  position: relative;
+  bottom: 0.1rem;
+}
+.other-content .arrivals .prod #product1 span {
+  font-weight: 500;
+  font-size: 15px;
+}
+.other-content .arrivals .prod #product1 p {
+  margin-top: 0.5rem;
+  font-weight: 530;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.other-content .arrivals .prod #product1 p span {
+  color: grey;
+  text-decoration: line-through;
+  font-size: 18px;
+}
+.other-content .arrivals .prod #product1 p small {
+  color: red;
+  font-weight: 400;
+  font-size: 12px;
+  background-color: #ffebeb;
+  padding: 0.2rem 0.5rem;
+  border-radius: 20px;
+  border: none;
+}
+.other-content .arrivals .prod #product2 {
+  display: flex;
+  flex-direction: column;
+}
+.other-content .arrivals .prod #product2 a img {
+  width: 250px;
+  border-radius: 20px;
+  height: 253px;
+  position: relative;
+  bottom: 0.1rem;
+}
+.other-content .arrivals .prod #product2 span {
+  font-weight: 500;
+  font-size: 15px;
+}
+.other-content .arrivals .prod #product2 p {
+  margin-top: 0.5rem;
+  font-weight: 530;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.other-content .arrivals .prod #product2 p span {
+  color: grey;
+  text-decoration: line-through;
+  font-size: 18px;
+}
+.other-content .arrivals .prod #product2 p small {
+  color: red;
+  font-weight: 400;
+  font-size: 12px;
+  background-color: #ffebeb;
+  padding: 0.2rem 0.5rem;
+  border-radius: 20px;
+  border: none;
+}
+.other-content .arrivals #view {
+  text-decoration: none;
+  padding: 0.6rem 4rem;
+  font-family: var(--main-font);
+  font-size: 14px;
+  border-radius: 30px;
+  color: black;
+  border: 1.4px solid #e5e5e5;
+}
+.other-content .hr {
+  background-color: #e5e5e5;
+  height: 1.5px;
+  width: 87%;
+  position: relative;
+  left: 5.2rem;
+}
+.other-content .selling {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.other-content .selling h1 {
+  font-weight: 800;
+  font-family: var(--main-font);
+  font-size: 35px;
+}
+.other-content .selling .top {
+  display: flex;
+  align-items: center;
+  font-family: var(--main-font);
+  gap: 1.8rem;
+}
+.other-content .selling .top #shirt {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.other-content .selling .top #shirt a {
+  border-radius: 20px;
+}
+.other-content .selling .top #shirt a img {
+  width: 250px;
+  border-radius: 20px;
+}
+.other-content .selling .top #shirt span {
+  font-weight: 500;
+  font-size: 15px;
+}
+.other-content .selling .top #shirt small {
+  font-weight: 530;
+  font-size: 18px;
+}
+.other-content .selling .top #shirt1 {
+  display: flex;
+  flex-direction: column;
+}
+.other-content .selling .top #shirt1 a img {
+  width: 250px;
+  border-radius: 20px;
+  height: 253px;
+  position: relative;
+  bottom: 0.1rem;
+}
+.other-content .selling .top #shirt1 span {
+  font-weight: 500;
+  font-size: 15px;
+}
+.other-content .selling .top #shirt1 p {
+  margin-top: 0.5rem;
+  font-weight: 530;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.other-content .selling .top #shirt1 p span {
+  color: grey;
+  text-decoration: line-through;
+  font-size: 18px;
+}
+.other-content .selling .top #shirt1 p small {
+  color: red;
+  font-weight: 400;
+  font-size: 12px;
+  background-color: #ffebeb;
+  padding: 0.2rem 0.5rem;
+  border-radius: 20px;
+  border: none;
+}
+.other-content .selling .top #shirt2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.other-content .selling .top #shirt2 a {
+  border-radius: 20px;
+}
+.other-content .selling .top #shirt2 a img {
+  width: 250px;
+  border-radius: 20px;
+  height: 255px;
+}
+.other-content .selling .top #shirt2 span {
+  font-weight: 500;
+  font-size: 15px;
+}
+.other-content .selling .top #shirt2 small {
+  font-weight: 530;
+  font-size: 18px;
+}
+.other-content .selling #all {
+  text-decoration: none;
+  padding: 0.6rem 4rem;
+  font-family: var(--main-font);
+  font-size: 14px;
+  border-radius: 30px;
+  color: black;
+  border: 1.4px solid #e5e5e5;
+}
+.other-content .dress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  background-color: var(--content-bgcolor);
+  margin: auto;
+  gap: 2rem;
+  border-radius: 30px;
+}
+.other-content .dress h1 {
+  font-weight: 800;
+  font-family: var(--main-font);
+  font-size: 35px;
+}
+.other-content .dress .browse {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  font-family: var(--main-font);
+}
+.other-content .dress .browse #casual {
+  color: black;
+  font-size: 25px;
+  font-weight: 500;
+  text-decoration: none;
+  background-image: url(images/image\ 11.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 1rem 24rem 13rem 1rem;
+  border-radius: 20px;
+}
+.other-content .dress .browse #party {
+  color: black;
+  font-size: 25px;
+  font-weight: 500;
+  text-decoration: none;
+  background-image: url(images/image\ 12.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 1rem 24rem 13rem 1rem;
+  border-radius: 20px;
+  grid-column: span 1;
+}
+.other-content .dress .browse #formal {
+  color: black;
+  font-size: 25px;
+  font-weight: 500;
+  text-decoration: none;
+  background-image: url(images/image\ 13.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 1rem 24rem 13rem 1rem;
+  border-radius: 20px;
+}
+.other-content .dress .browse #gym {
+  color: black;
+  font-size: 25px;
+  font-weight: 500;
+  text-decoration: none;
+  background-image: url(images/image\ 14.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 1rem 24rem 13rem 1rem;
+  border-radius: 20px;
+}
+.other-content .customer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.other-content .customer h1 {
+  font-weight: 800;
+  font-family: var(--main-font);
+  font-size: 35px;
+}
+.other-content .customer .reviews {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--main-font);
+}
+.other-content .customer .reviews #review1 {
+  border: 1.5px solid #e5e5e5;
+  border-radius: 20px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+.other-content .customer .reviews #review1 img {
+  width: 100px;
+}
+.other-content .customer .reviews #review1 span {
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.other-content .customer .reviews #review1 span i {
+  color: white;
+  background-color: green;
+  border-radius: 50%;
+  padding: 0.2rem;
+  font-size: 12px;
+}
+.other-content .customer .reviews #review1 p {
+  font-size: 13.9px;
+  font-weight: 300;
+}
+.other-content .newsletter {
+  display: flex;
+  gap: 18rem;
+  align-items: center;
+  background-color: var(--main-color);
+  padding: 2rem 3.5rem;
+  border-radius: 20px;
+  margin: auto;
+}
+.other-content .newsletter span {
+  font-weight: 800;
+  font-family: var(--main-font);
+  font-size: 35px;
+  color: white;
+}
+.other-content .newsletter .inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.other-content .newsletter .inputs #mail {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 20px;
+  gap: 0.5rem;
+}
+.other-content .newsletter .inputs #mail i {
+  color: #dbd7d7;
+}
+.other-content .newsletter .inputs #mail input {
+  border: none;
+  outline: none;
+}
+.other-content .newsletter .inputs #mail input::-moz-placeholder {
+  color: #adabab;
+}
+.other-content .newsletter .inputs #mail input::placeholder {
+  color: #adabab;
+}
+.other-content .newsletter .inputs a {
+  text-decoration: none;
+  color: black;
+  font-family: var(--main-font);
+  font-size: 13px;
+  background-color: white;
+  padding: 0.7rem 2.5rem;
+  border-radius: 20px;
+}
+.other-content .footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--content-bgcolor);
+  padding: 2rem;
+}
+.other-content .footer .texts {
+  display: flex;
+  align-items: center;
+  gap: 5.5rem;
+  font-family: var(--main-font);
+}
+.other-content .footer .texts .logotext {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.other-content .footer .texts .logotext span {
+  font-size: 30px;
+  font-weight: 900;
+}
+.other-content .footer .texts .logotext p {
+  font-size: 13px;
+  font-weight: 300;
+}
+.other-content .footer .texts .logotext #media {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.other-content .footer .texts .logotext #media a {
+  color: white;
+  border-radius: 50%;
+  padding: 0.3rem 0.5rem;
+  font-size: 10px;
+  background-color: var(--main-color);
+}
+.other-content .footer .texts .complink {
+  display: flex;
+  align-items: center;
+  gap: 5.5rem;
+}
+.other-content .footer .texts .complink .company {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.other-content .footer .texts .complink .company span {
+  font-weight: 500;
+}
+.other-content .footer .texts .complink .company a {
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
+  font-weight: 300;
+}
+.other-content .footer .line {
+  background-color: #adabab;
+  height: 1px;
+  width: 90%;
+}
+.other-content .footer .payment {
+  display: flex;
+  align-items: center;
+  gap: 35.5rem;
+}
+.other-content .footer .payment span {
+  font-family: var(--main-font);
+  font-size: 13px;
+  font-weight: 300;
+}
+.other-content .footer .payment .image {
+  display: flex;
+  align-items: center;
+}
+.other-content .footer .payment .image img {
+  width: 50px;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 500px) {
+  .nav {
+    flex-direction: column;
+    padding: 1rem 1rem 4rem 1rem;
+  }
+  .nav .bars {
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    top: 1.4rem;
+    left: 1.6rem;
+  }
+  .nav .bars #close {
+    display: none;
+  }
+  .nav #logo {
+    font-size: 20px;
+    position: absolute;
+    top: 1rem;
+    left: 8.5rem;
+  }
+  .nav .links {
+    flex-direction: column;
+    position: relative;
+    top: 3rem;
+    right: 8rem;
+    display: none;
+  }
+  .nav .links select {
+    width: 70%;
+    font-size: 17px;
+  }
+  .nav .links select option {
+    font-size: 10px;
+  }
+  .nav #input {
+    display: none;
+  }
+  .nav #cart {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    gap: 1rem;
+  }
+  .nav #cart a {
+    font-size: 18px;
+  }
+  .contents .head-content {
+    flex-direction: column;
+    padding: 2rem 2rem 0rem 2rem;
+    gap: 1rem;
+  }
+  .contents .head-content #headtext #find {
+    font-size: 40px;
+  }
+  .contents .head-content #headtext p {
+    font-size: 13px;
+  }
+  .contents .head-content #headtext a {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    display: inline-block;
+  }
+  .contents .head-content img {
+    width: 300px;
+  }
+  .contents .brands {
+    gap: 1rem;
+  }
+  .contents .brands span {
+    font-size: 15px;
+  }
+  .other-content {
+    margin-top: 2rem;
+  }
+  .other-content .arrivals {
+    gap: 1rem;
+  }
+  .other-content .arrivals h1 {
+    font-size: 20px;
+  }
+  .other-content .arrivals .prod {
+    flex-direction: column;
+  }
+  .other-content .hr {
+    margin: auto;
+    position: static;
+  }
+  .other-content .selling {
+    gap: 1rem;
+  }
+  .other-content .selling h1 {
+    font-size: 20px;
+  }
+  .other-content .selling .top {
+    flex-direction: column;
+  }
+  .other-content .dress {
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .other-content .dress h1 {
+    font-size: 20px;
+  }
+  .other-content .dress .browse {
+    display: flex;
+    flex-direction: column;
+  }
+  .other-content .dress .browse #casual {
+    padding: 1rem 12rem 4rem 1rem;
+  }
+  .other-content .dress .browse #formal {
+    padding: 1rem 12rem 4rem 1rem;
+  }
+  .other-content .dress .browse #party {
+    padding: 1rem 12rem 4rem 1rem;
+  }
+  .other-content .dress .browse #gym {
+    padding: 1rem 12rem 4rem 1rem;
+  }
+  .other-content .customer {
+    gap: 1rem;
+  }
+  .other-content .customer h1 {
+    font-size: 20px;
+  }
+  .other-content .customer .reviews {
+    flex-direction: column;
+  }
+  .other-content .customer .reviews #review1 img {
+    width: 60px;
+  }
+  .other-content .customer .reviews #review1 span {
+    font-size: 15px;
+  }
+  .other-content .customer .reviews #review1 span i {
+    font-size: 5px;
+  }
+  .other-content .customer .reviews #review1 p {
+    font-size: 10px;
+  }
+  .other-content .newsletter {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+  }
+  .other-content .newsletter span {
+    font-size: 20px;
+  }
+  .other-content .footer {
+    padding: 1rem 1rem 4rem 1rem;
+  }
+  .other-content .footer .texts {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .other-content .footer .texts .logotext {
+    position: relative;
+    right: 1.5rem;
+  }
+  .other-content .footer .texts .complink {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .other-content .footer .payment {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}/*# sourceMappingURL=main.css.map */
