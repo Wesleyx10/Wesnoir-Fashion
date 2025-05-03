@@ -580,7 +580,6 @@ header a {
   gap: 2rem;
   background-color: var(--content-bgcolor);
   padding: 2rem;
-  width: 94.7%;
 }
 .content .footer .texts {
   display: flex;
