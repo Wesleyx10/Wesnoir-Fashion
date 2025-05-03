@@ -45,7 +45,7 @@ header a {
   justify-content: center;
   z-index: 1;
 }
-.nav .bars {
+.nav #open {
   display: none;
 }
 .nav #logo {
@@ -57,16 +57,17 @@ header a {
   align-items: center;
   gap: 1.5rem;
 }
-.nav .links select {
-  border: none;
-  outline: none;
-  font-size: 15px;
-  width: 18%;
+.nav .links #close {
+  display: none;
 }
 .nav .links a {
   text-decoration: none;
   color: black;
   font-size: 15px;
+  transition: 0.3s ease;
+}
+.nav .links a:hover {
+  color: var(--main-color);
 }
 .nav #input {
   background-color: var(--content-bgcolor);
@@ -96,6 +97,10 @@ header a {
 .nav #cart a {
   font-size: 23px;
   color: black;
+  transition: 0.3s ease;
+}
+.nav #cart a:hover {
+  color: var(--main-color);
 }
 
 .contents {
@@ -659,15 +664,12 @@ header a {
     flex-direction: column;
     padding: 1rem 1rem 4rem 1rem;
   }
-  .nav .bars {
+  .nav #open {
     display: block;
     font-size: 20px;
     position: absolute;
     top: 1.4rem;
     left: 1.6rem;
-  }
-  .nav .bars #close {
-    display: none;
   }
   .nav #logo {
     font-size: 20px;
@@ -677,17 +679,19 @@ header a {
   }
   .nav .links {
     flex-direction: column;
-    position: relative;
-    top: 3rem;
-    right: 8rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    height: 100vh;
+    width: 200px;
+    align-items: flex-end;
+    padding: 30px 30px 0 0;
     display: none;
+    transition: left 0.4s ease;
   }
-  .nav .links select {
-    width: 70%;
-    font-size: 17px;
-  }
-  .nav .links select option {
-    font-size: 10px;
+  .nav .links #close {
+    font-size: 25px;
   }
   .nav #input {
     display: none;
