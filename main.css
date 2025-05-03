@@ -60,6 +60,9 @@ header a {
 .nav .links #close {
   display: none;
 }
+.nav .links #home {
+  color: var(--main-color);
+}
 .nav .links a {
   text-decoration: none;
   color: black;
