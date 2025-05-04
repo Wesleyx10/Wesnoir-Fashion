@@ -725,6 +725,12 @@ header a {
     text-align: center;
     display: inline-block;
   }
+  .contents .head-content #headtext #rating span {
+    font-size: 19px;
+  }
+  .contents .head-content #headtext #rating span small {
+    font-size: 13px;
+  }
   .contents .head-content img {
     width: 300px;
   }

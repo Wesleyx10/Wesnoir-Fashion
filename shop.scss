@@ -583,6 +583,7 @@ header {
     gap: 2rem;
     background-color: var(--content-bgcolor);
     padding: 2rem;
+    width: 94.7%;
     .texts {
       display: flex;
       align-items: center;
@@ -754,7 +755,7 @@ header {
     }
     .footer {
       padding: 1rem 1rem 4rem 1rem;
-
+      width: 91%;
       .texts {
         flex-direction: column;
         gap: 2rem;

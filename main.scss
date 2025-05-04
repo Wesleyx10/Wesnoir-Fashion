@@ -722,6 +722,14 @@ header {
           text-align: center;
           display: inline-block;
         }
+        #rating {
+          span {
+            font-size: 19px;
+            small {
+              font-size: 13px;
+            }
+          }
+        }
       }
       img {
         width: 300px;
