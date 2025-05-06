@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --main-color: #6e806a;
+  --main-font: poppins;
+  --content-bgcolor: #f0efed;
+  --main-bg-color: #e5e1d8;
+}
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding-top: 4rem;
+  font-family: var(--main-font);
+  background: var(--content-bgcolor);
+  color: black;
+}
+h1 {
+  font-weight: 600;
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  #namm {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    label {
+      font-size: 14px;
+      font-weight: 300;
+    }
+    input {
+      padding: 1rem;
+      width: 400px;
+      outline: none;
+      border: solid 1px var(--content-bgcolor);
+      background-color: white;
+      &::placeholder {
+        font-size: 12px;
+        font-weight: 100;
+        color: black;
+      }
+    }
+  }
+  #mails {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    label {
+      font-size: 14px;
+      font-weight: 300;
+    }
+    input {
+      padding: 1rem;
+      width: 400px;
+      outline: none;
+      border: solid 1px var(--content-bgcolor);
+      background-color: white;
+      &::placeholder {
+        font-size: 12px;
+        font-weight: 100;
+        color: black;
+      }
+    }
+  }
+  #pass {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    label {
+      font-size: 14px;
+      font-weight: 300;
+    }
+    input {
+      padding: 1rem;
+      width: 400px;
+      outline: none;
+      border: solid 1px var(--content-bgcolor);
+      background-color: white;
+      &::placeholder {
+        font-size: 12px;
+        font-weight: 100;
+        color: black;
+      }
+    }
+  }
+}
+#signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  #sign {
+    color: var(--main-color);
+    padding: 0.5rem 5rem;
+    text-decoration: none;
+    background-color: white;
+    transition: 0.4s ease;
+    &:hover {
+      background-color: var(--main-color);
+      transform: all;
+      color: white;
+    }
+  }
+  #acct {
+    display: flex;
+    align-items: center;
+
+    gap: 0.5rem;
+    a {
+      color: var(--main-color);
+      text-decoration: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 500px) {
+  h1 {
+    font-size: 25px;
+  }
+  .inputs {
+    #namm {
+      input {
+        width: 300px;
+      }
+    }
+    #mails {
+      input {
+        width: 300px;
+      }
+    }
+    #pass {
+      input {
+        width: 300px;
+      }
+    }
+  }
+  #signup {
+    #sign {
+      padding: 0.5rem 2rem;
+    }
+  }
+}

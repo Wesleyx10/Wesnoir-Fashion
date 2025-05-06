@@ -17,22 +17,6 @@ body {
   flex-direction: column;
 }
 
-header {
-  background: var(--main-color);
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--main-font);
-  padding: 0.3rem 0rem;
-  color: white;
-  font-size: 13px;
-  gap: 0.4rem;
-}
-header a {
-  color: white;
-}
-
 .nav {
   display: flex;
   align-items: center;
