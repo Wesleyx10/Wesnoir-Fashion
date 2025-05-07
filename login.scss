@@ -36,7 +36,7 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  #mails {
+  #maill {
     display: flex;
     flex-direction: column;
     gap: 0.1rem;
@@ -57,7 +57,7 @@ h1 {
       }
     }
   }
-  #pass {
+  #password {
     display: flex;
     flex-direction: column;
     gap: 0.1rem;
@@ -79,35 +79,24 @@ h1 {
     }
   }
 }
-#signup {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  #sign {
-    color: var(--main-color);
-    padding: 0.5rem 5rem;
-    text-decoration: none;
-    background-color: white;
-    transition: 0.4s ease;
-    border: none;
-    cursor: pointer;
-    &:hover {
-      background-color: var(--main-color);
-      transform: all;
-      color: white;
-    }
+#login {
+  color: var(--main-color);
+  padding: 0.5rem 5rem;
+  text-decoration: none;
+  background-color: white;
+  transition: 0.4s ease;
+  &:hover {
+    background-color: var(--main-color);
+    transform: all;
+    color: white;
   }
-  #acct {
-    display: flex;
-    align-items: center;
-
-    gap: 0.5rem;
-    a {
-      color: var(--main-color);
-      text-decoration: none;
-    }
-  }
+}
+#create {
+  color: var(--main-color);
+  padding: 0.5rem 5rem;
+  background-color: transparent;
+  transition: 0.4s ease;
+  margin-top: 5rem;
 }
 
 @media only screen and (min-width: 0px) and (max-width: 500px) {
@@ -118,20 +107,18 @@ h1 {
     }
   }
   .inputs {
-    #mails {
+    #maill {
       input {
         width: 300px;
       }
     }
-    #pass {
+    #password {
       input {
         width: 300px;
       }
     }
   }
-  #signup {
-    #sign {
-      padding: 0.5rem 2rem;
-    }
+  #login {
+    padding: 0.5rem 2rem;
   }
 }
