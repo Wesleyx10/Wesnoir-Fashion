@@ -386,8 +386,18 @@ body {
   .nav #cart a {
     font-size: 18px;
   }
+  .location p {
+    margin-left: 3rem;
+    font-size: 20px;
+  }
+  .location p span {
+    font-size: 13px;
+  }
+  .location iframe {
+    width: 78%;
+  }
   .contact {
-    margin-top: 1rem;
+    margin-top: 2rem;
     padding: 1rem;
   }
   .contact h1 {

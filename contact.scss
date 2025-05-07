@@ -369,8 +369,21 @@ body {
       }
     }
   }
+  .location {
+    p {
+      margin-left: 3rem;
+      font-size: 20px;
+
+      span {
+        font-size: 13px;
+      }
+    }
+    iframe {
+      width: 78%;
+    }
+  }
   .contact {
-    margin-top: 1rem;
+    margin-top: 2rem;
     padding: 1rem;
     h1 {
       font-size: 30px;
