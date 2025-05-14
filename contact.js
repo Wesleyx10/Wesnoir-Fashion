@@ -20,6 +20,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 const button = document.querySelector("#send");
+const newsLetter = document.querySelector("#news");
 
 if (button) {
   button.addEventListener("click", async (e) => {
@@ -52,6 +53,31 @@ if (button) {
       popup.style.right = "50px";
       setTimeout(() => {
         popup.style.right = "-340px";
+      }, 3000);
+      setTimeout(() => {
+        window.location.reload();
+      }, 4000);
+    } catch (err) {
+      console.log("Can't Send Feedback", err);
+    }
+  });
+}
+
+if (newsLetter) {
+  newsLetter.addEventListener("click", async (e) => {
+    e.preventDefault();
+    const email = document.querySelector("#newsEmail").value;
+    const popup = document.querySelector("#popupmsg");
+    if (!email) {
+      alert("Please Input Your Email");
+    }
+    const data = { email };
+    try {
+      await addDoc(collection(db, "NewsLetterSub"), data);
+      popupmsg.style.opacity = 1;
+      popupmsg.style.right = "50px";
+      setTimeout(() => {
+        popupmsg.style.right = "-340px";
       }, 3000);
       setTimeout(() => {
         window.location.reload();

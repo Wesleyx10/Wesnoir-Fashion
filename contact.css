@@ -403,7 +403,6 @@ body {
     align-items: flex-end;
     padding: 30px 30px 0 0;
     display: none;
-    transition: left 0.4s ease;
   }
   .nav .links #close {
     font-size: 25px;
@@ -457,6 +456,13 @@ body {
     padding: 2rem;
     gap: 1rem;
     margin-top: 2rem;
+  }
+  .newsletter #popupmsg {
+    right: -180px;
+    width: 150px;
+    white-space: nowrap;
+    font-size: 12px;
+    padding: 0.5rem;
   }
   .newsletter span {
     font-size: 20px;

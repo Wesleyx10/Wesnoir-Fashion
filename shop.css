@@ -515,6 +515,28 @@ body {
   margin: auto;
   margin-top: 3rem;
 }
+.content .newsletter #popupmsg {
+  text-align: center;
+  font-family: var(--main-font);
+  background-color: white;
+  padding: 1rem;
+  font-size: 15px;
+  border: solid 1px var(--main-color);
+  width: 300px;
+  margin: auto;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  position: fixed;
+  top: 6rem;
+  right: -340px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  transition: right 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+}
 .content .newsletter span {
   font-weight: 800;
   font-family: var(--main-font);
@@ -722,6 +744,13 @@ body {
     padding: 2rem;
     gap: 1rem;
     margin-top: 1rem;
+  }
+  .content .newsletter #popupmsg {
+    right: -180px;
+    width: 150px;
+    white-space: nowrap;
+    font-size: 12px;
+    padding: 0.5rem;
   }
   .content .newsletter span {
     font-size: 20px;
