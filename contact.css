@@ -124,6 +124,40 @@ body {
   font-family: var(--main-font);
   gap: 2rem;
 }
+.contact #popup {
+  text-align: center;
+  font-family: var(--main-font);
+  background-color: white;
+  padding: 1rem;
+  font-size: 15px;
+  border: solid 1px var(--main-color);
+  width: 300px;
+  margin: auto;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  position: fixed;
+  top: 6rem;
+  right: -340px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  transition: right 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+}
+.contact #popup i {
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 50%;
+  padding: 0.4rem 0.3rem;
+  color: white;
+  font-size: 12px;
+}
+.contact #popup #popup.show {
+  opacity: 1;
+  right: 20px;
+}
 .contact h1 {
   text-align: center;
   font-weight: 600;
@@ -399,6 +433,17 @@ body {
   .contact {
     margin-top: 2rem;
     padding: 1rem;
+  }
+  .contact #popup {
+    right: -180px;
+    width: 150px;
+    white-space: nowrap;
+    font-size: 12px;
+    padding: 0.5rem;
+  }
+  .contact #popup i {
+    font-size: 12px;
+    padding: 0.2rem;
   }
   .contact h1 {
     font-size: 30px;
