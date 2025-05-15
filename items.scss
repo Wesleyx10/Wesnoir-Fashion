@@ -1,0 +1,463 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-color: #6e806a;
+  --main-font: poppins;
+  --content-bgcolor: #f0efed;
+  --main-bg-color: #e5e1d8;
+}
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--main-font);
+  gap: 1rem;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 4.2rem;
+  padding: 1rem;
+  font-family: var(--main-font);
+  position: sticky;
+  top: 0;
+  background-color: white;
+  justify-content: center;
+  z-index: 1;
+  #open {
+    display: none;
+  }
+  #logo {
+    font-weight: 900;
+    font-size: 30px;
+  }
+  .links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    #close {
+      display: none;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 15px;
+      transition: 0.3s ease;
+      &:hover {
+        color: var(--main-color);
+      }
+    }
+  }
+  #input {
+    background-color: var(--content-bgcolor);
+    padding: 0.6rem 12rem 0.6rem 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    border-radius: 20px;
+    color: #bcbcbc;
+    input {
+      border: none;
+      outline: none;
+      background-color: var(--content-bgcolor);
+      &::placeholder {
+        color: #bcbcbc;
+      }
+    }
+  }
+  #cart {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    a {
+      font-size: 23px;
+      color: black;
+      transition: 0.3s ease;
+      &:hover {
+        color: var(--main-color);
+      }
+    }
+  }
+}
+#back {
+  color: white;
+  font-size: 13px;
+  font-weight: 100;
+  padding: 0.3rem 0.5rem;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  width: 13px;
+  margin-left: 6.2rem;
+}
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  #mainImg {
+    width: 350px;
+    border: none;
+    border-radius: 30px;
+  }
+  .price {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    #rating {
+      max-width: 130px;
+    }
+    #shirtPrice {
+      font-size: 30px;
+    }
+    #aboutShirt {
+      font-weight: 300;
+    }
+    .sizes {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      justify-content: flex-start;
+      #sizeBtn {
+        background-color: var(--content-bgcolor);
+        border: none;
+        color: black;
+        font-family: var(--main-font);
+        padding: 0.7rem 1rem;
+        border-radius: 30px;
+        font-weight: 300;
+        cursor: pointer;
+      }
+    }
+    .quantity {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 1rem;
+      .quant {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        background-color: var(--content-bgcolor);
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 30px;
+        button {
+          border: none;
+          background: transparent;
+          font-size: 26px;
+          cursor: pointer;
+          outline: none;
+        }
+        span {
+          font-size: 13px;
+        }
+      }
+      #cartBtn {
+        color: white;
+        background-color: var(--main-color);
+        border: none;
+        padding: 0.8rem 9rem;
+        border-radius: 30px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+#alert {
+  margin-left: 12.5rem;
+  font-weight: 300;
+  font-size: 15px;
+  border: 1.5px solid var(--main-color);
+  padding: 0.2rem 1rem;
+  border-radius: 10px;
+  width: 90px;
+  position: relative;
+  bottom: 0.5rem;
+}
+.newsletter {
+  display: flex;
+  gap: 18rem;
+  align-items: center;
+  background-color: var(--main-color);
+  padding: 2rem 3.5rem;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 7rem;
+  #popupmsg {
+    text-align: center;
+    font-family: var(--main-font);
+    background-color: white;
+    padding: 1rem;
+    font-size: 15px;
+    border: solid 1px var(--main-color);
+    width: 300px;
+    margin: auto;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    position: fixed;
+    top: 6rem;
+    right: -340px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    transition: right 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+  }
+  span {
+    font-weight: 800;
+    font-family: var(--main-font);
+    font-size: 35px;
+    color: white;
+  }
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    #mail {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 20px;
+      gap: 0.5rem;
+      i {
+        color: #dbd7d7;
+      }
+      input {
+        border: none;
+        outline: none;
+        &::placeholder {
+          color: #adabab;
+        }
+      }
+    }
+    a {
+      text-decoration: none;
+      color: black;
+      font-family: var(--main-font);
+      font-size: 13px;
+      background-color: white;
+      padding: 0.7rem 2.5rem;
+      border-radius: 20px;
+    }
+  }
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--content-bgcolor);
+  padding: 2rem;
+  .texts {
+    display: flex;
+    align-items: center;
+    gap: 5.5rem;
+    font-family: var(--main-font);
+    .logotext {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      span {
+        font-size: 30px;
+        font-weight: 900;
+      }
+      p {
+        font-size: 13px;
+        font-weight: 300;
+      }
+      #media {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        a {
+          color: white;
+          border-radius: 50%;
+          padding: 0.3rem 0.5rem;
+          font-size: 10px;
+          background-color: var(--main-color);
+        }
+      }
+    }
+    .complink {
+      display: flex;
+      align-items: center;
+      gap: 5.5rem;
+      .company {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        span {
+          font-weight: 500;
+        }
+        a {
+          text-decoration: none;
+          color: black;
+          font-size: 13px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+  .line {
+    background-color: #adabab;
+    height: 1px;
+    width: 90%;
+  }
+  .payment {
+    display: flex;
+    align-items: center;
+    gap: 35.5rem;
+    span {
+      font-family: var(--main-font);
+      font-size: 13px;
+      font-weight: 300;
+    }
+    .image {
+      display: flex;
+      align-items: center;
+      img {
+        width: 50px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 500px) {
+  .nav {
+    flex-direction: column;
+    padding: 1rem 1rem 4rem 1rem;
+
+    #open {
+      display: block;
+      font-size: 20px;
+      position: absolute;
+      top: 1.4rem;
+      left: 1.6rem;
+    }
+
+    #logo {
+      font-size: 20px;
+      position: absolute;
+      top: 1rem;
+      left: 8.5rem;
+    }
+    .links {
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: white;
+      height: 100vh;
+      width: 200px;
+      align-items: flex-end;
+      padding: 30px 30px 0 0;
+      display: none;
+      transition: left 0.4s ease;
+      #close {
+        font-size: 25px;
+      }
+    }
+    #input {
+      display: none;
+    }
+    #cart {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      gap: 1rem;
+      a {
+        font-size: 18px;
+      }
+    }
+  }
+  #back {
+    margin-left: 1.5rem;
+    position: relative;
+    bottom: 1rem;
+    font-size: 12px;
+    padding: 0.3rem 0.4rem;
+  }
+  .item {
+    flex-direction: column;
+    #mainImg {
+      width: 280px;
+    }
+    .price {
+      #heading {
+        font-size: 25px;
+        align-items: center;
+        justify-content: center;
+      }
+      #rating {
+        max-width: 100px;
+      }
+      #shirtPrice {
+        font-size: 25px;
+      }
+      .sizes {
+        #sizeBtn {
+          font-size: 12px;
+        }
+      }
+      .quantity {
+        .quant {
+          button {
+            font-size: 25px;
+          }
+          span {
+            font-size: 13px;
+          }
+        }
+        #cartBtn {
+          padding: 0.85rem 4rem;
+        }
+      }
+    }
+  }
+  #alert {
+    display: none;
+  }
+  .newsletter {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+    #popupmsg {
+      right: -180px;
+      width: 150px;
+      white-space: nowrap;
+      font-size: 12px;
+      padding: 0.5rem;
+    }
+    span {
+      font-size: 20px;
+    }
+  }
+  .footer {
+    padding: 1rem 1rem 4rem 1rem;
+    .texts {
+      flex-direction: column;
+      gap: 2rem;
+      .logotext {
+        position: relative;
+        right: 1.5rem;
+      }
+      .complink {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+    }
+    .payment {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+}

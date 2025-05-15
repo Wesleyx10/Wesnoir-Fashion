@@ -183,42 +183,62 @@ body {
   font-family: var(--main-font);
   gap: 1.8rem;
 }
-.other-content .arrivals .prod #products {
+.other-content .arrivals .prod .products1 {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
 }
-.other-content .arrivals .prod #products a {
+.other-content .arrivals .prod .products1 a {
   border-radius: 20px;
 }
-.other-content .arrivals .prod #products a img {
+.other-content .arrivals .prod .products1 a img {
   width: 250px;
   border-radius: 20px;
 }
-.other-content .arrivals .prod #products span {
+.other-content .arrivals .prod .products1 span {
   font-weight: 500;
   font-size: 15px;
 }
-.other-content .arrivals .prod #products small {
+.other-content .arrivals .prod .products1 small {
   font-weight: 530;
   font-size: 18px;
 }
-.other-content .arrivals .prod #product1 {
+.other-content .arrivals .prod .products2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.other-content .arrivals .prod .products2 a {
+  border-radius: 20px;
+}
+.other-content .arrivals .prod .products2 a img {
+  width: 250px;
+  border-radius: 20px;
+}
+.other-content .arrivals .prod .products2 span {
+  font-weight: 500;
+  font-size: 15px;
+}
+.other-content .arrivals .prod .products2 small {
+  font-weight: 530;
+  font-size: 18px;
+}
+.other-content .arrivals .prod .product1 {
   display: flex;
   flex-direction: column;
 }
-.other-content .arrivals .prod #product1 a img {
+.other-content .arrivals .prod .product1 a img {
   width: 250px;
   border-radius: 20px;
   height: 253px;
   position: relative;
   bottom: 0.1rem;
 }
-.other-content .arrivals .prod #product1 span {
+.other-content .arrivals .prod .product1 span {
   font-weight: 500;
   font-size: 15px;
 }
-.other-content .arrivals .prod #product1 p {
+.other-content .arrivals .prod .product1 p {
   margin-top: 0.5rem;
   font-weight: 530;
   font-size: 18px;
@@ -226,56 +246,28 @@ body {
   align-items: center;
   gap: 0.5rem;
 }
-.other-content .arrivals .prod #product1 p span {
-  color: grey;
-  text-decoration: line-through;
-  font-size: 18px;
-}
-.other-content .arrivals .prod #product1 p small {
-  color: red;
-  font-weight: 400;
-  font-size: 12px;
-  background-color: #ffebeb;
-  padding: 0.2rem 0.5rem;
-  border-radius: 20px;
-  border: none;
-}
-.other-content .arrivals .prod #product2 {
+.other-content .arrivals .prod .product2 {
   display: flex;
   flex-direction: column;
 }
-.other-content .arrivals .prod #product2 a img {
+.other-content .arrivals .prod .product2 a img {
   width: 250px;
   border-radius: 20px;
   height: 253px;
   position: relative;
   bottom: 0.1rem;
 }
-.other-content .arrivals .prod #product2 span {
+.other-content .arrivals .prod .product2 span {
   font-weight: 500;
   font-size: 15px;
 }
-.other-content .arrivals .prod #product2 p {
+.other-content .arrivals .prod .product2 p {
   margin-top: 0.5rem;
   font-weight: 530;
   font-size: 18px;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-}
-.other-content .arrivals .prod #product2 p span {
-  color: grey;
-  text-decoration: line-through;
-  font-size: 18px;
-}
-.other-content .arrivals .prod #product2 p small {
-  color: red;
-  font-weight: 400;
-  font-size: 12px;
-  background-color: #ffebeb;
-  padding: 0.2rem 0.5rem;
-  border-radius: 20px;
-  border: none;
 }
 .other-content .arrivals #view {
   text-decoration: none;
@@ -310,42 +302,42 @@ body {
   font-family: var(--main-font);
   gap: 1.8rem;
 }
-.other-content .selling .top #shirt {
+.other-content .selling .top .shirt {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
 }
-.other-content .selling .top #shirt a {
+.other-content .selling .top .shirt a {
   border-radius: 20px;
 }
-.other-content .selling .top #shirt a img {
+.other-content .selling .top .shirt a img {
   width: 250px;
   border-radius: 20px;
 }
-.other-content .selling .top #shirt span {
+.other-content .selling .top .shirt span {
   font-weight: 500;
   font-size: 15px;
 }
-.other-content .selling .top #shirt small {
+.other-content .selling .top .shirt small {
   font-weight: 530;
   font-size: 18px;
 }
-.other-content .selling .top #shirt1 {
+.other-content .selling .top .shirt1 {
   display: flex;
   flex-direction: column;
 }
-.other-content .selling .top #shirt1 a img {
+.other-content .selling .top .shirt1 a img {
   width: 250px;
   border-radius: 20px;
   height: 253px;
   position: relative;
   bottom: 0.1rem;
 }
-.other-content .selling .top #shirt1 span {
+.other-content .selling .top .shirt1 span {
   font-weight: 500;
   font-size: 15px;
 }
-.other-content .selling .top #shirt1 p {
+.other-content .selling .top .shirt1 p {
   margin-top: 0.5rem;
   font-weight: 530;
   font-size: 18px;
@@ -353,38 +345,24 @@ body {
   align-items: center;
   gap: 0.5rem;
 }
-.other-content .selling .top #shirt1 p span {
-  color: grey;
-  text-decoration: line-through;
-  font-size: 18px;
-}
-.other-content .selling .top #shirt1 p small {
-  color: red;
-  font-weight: 400;
-  font-size: 12px;
-  background-color: #ffebeb;
-  padding: 0.2rem 0.5rem;
-  border-radius: 20px;
-  border: none;
-}
-.other-content .selling .top #shirt2 {
+.other-content .selling .top .shirt2 {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
 }
-.other-content .selling .top #shirt2 a {
+.other-content .selling .top .shirt2 a {
   border-radius: 20px;
 }
-.other-content .selling .top #shirt2 a img {
+.other-content .selling .top .shirt2 a img {
   width: 250px;
   border-radius: 20px;
   height: 255px;
 }
-.other-content .selling .top #shirt2 span {
+.other-content .selling .top .shirt2 span {
   font-weight: 500;
   font-size: 15px;
 }
-.other-content .selling .top #shirt2 small {
+.other-content .selling .top .shirt2 small {
   font-weight: 530;
   font-size: 18px;
 }

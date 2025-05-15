@@ -172,7 +172,7 @@ body {
       align-items: center;
       font-family: var(--main-font);
       gap: 1.8rem;
-      #products {
+      .products1 {
         display: flex;
         flex-direction: column;
         gap: 0.3rem;
@@ -192,46 +192,27 @@ body {
           font-size: 18px;
         }
       }
-      #product1 {
+      .products2 {
         display: flex;
         flex-direction: column;
+        gap: 0.3rem;
         a {
+          border-radius: 20px;
           img {
             width: 250px;
             border-radius: 20px;
-            height: 253px;
-            position: relative;
-            bottom: 0.1rem;
           }
         }
         span {
           font-weight: 500;
           font-size: 15px;
         }
-        p {
-          margin-top: 0.5rem;
+        small {
           font-weight: 530;
           font-size: 18px;
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-          span {
-            color: grey;
-            text-decoration: line-through;
-            font-size: 18px;
-          }
-          small {
-            color: red;
-            font-weight: 400;
-            font-size: 12px;
-            background-color: #ffebeb;
-            padding: 0.2rem 0.5rem;
-            border-radius: 20px;
-            border: none;
-          }
         }
       }
-      #product2 {
+      .product1 {
         display: flex;
         flex-direction: column;
         a {
@@ -254,20 +235,31 @@ body {
           display: flex;
           align-items: center;
           gap: 0.5rem;
-          span {
-            color: grey;
-            text-decoration: line-through;
-            font-size: 18px;
-          }
-          small {
-            color: red;
-            font-weight: 400;
-            font-size: 12px;
-            background-color: #ffebeb;
-            padding: 0.2rem 0.5rem;
+        }
+      }
+      .product2 {
+        display: flex;
+        flex-direction: column;
+        a {
+          img {
+            width: 250px;
             border-radius: 20px;
-            border: none;
+            height: 253px;
+            position: relative;
+            bottom: 0.1rem;
           }
+        }
+        span {
+          font-weight: 500;
+          font-size: 15px;
+        }
+        p {
+          margin-top: 0.5rem;
+          font-weight: 530;
+          font-size: 18px;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
         }
       }
     }
@@ -303,7 +295,7 @@ body {
       align-items: center;
       font-family: var(--main-font);
       gap: 1.8rem;
-      #shirt {
+      .shirt {
         display: flex;
         flex-direction: column;
         gap: 0.3rem;
@@ -323,7 +315,7 @@ body {
           font-size: 18px;
         }
       }
-      #shirt1 {
+      .shirt1 {
         display: flex;
         flex-direction: column;
         a {
@@ -346,23 +338,9 @@ body {
           display: flex;
           align-items: center;
           gap: 0.5rem;
-          span {
-            color: grey;
-            text-decoration: line-through;
-            font-size: 18px;
-          }
-          small {
-            color: red;
-            font-weight: 400;
-            font-size: 12px;
-            background-color: #ffebeb;
-            padding: 0.2rem 0.5rem;
-            border-radius: 20px;
-            border: none;
-          }
         }
       }
-      #shirt2 {
+      .shirt2 {
         display: flex;
         flex-direction: column;
         gap: 0.3rem;
