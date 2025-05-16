@@ -28,14 +28,14 @@ productLinks.forEach((link) => {
     );
 
     if (product) {
-      const imageEl = product.querySelector(".tImg");
-      const headerEl = product.querySelector(".tHead");
-      const priceEl = product.querySelector(".tPrice");
+      const imageItem = product.querySelector(".tImg");
+      const headerItem = product.querySelector(".tHead");
+      const priceItem = product.querySelector(".tPrice");
 
-      if (imageEl && headerEl && priceEl) {
-        const image = imageEl.src;
-        const header = headerEl.textContent;
-        const price = priceEl.textContent;
+      if (imageItem && headerItem && priceItem) {
+        const image = imageItem.src;
+        const header = headerItem.textContent;
+        const price = priceItem.textContent;
 
         localStorage.setItem("productImage", image);
         localStorage.setItem("productHeader", header);
@@ -61,13 +61,113 @@ window.onload = () => {
   if (price && shirtPrice) shirtPrice.textContent = price;
 };
 
-adding.addEventListener("click", () => {
-  quantity++;
-  numbers.textContent = quantity;
-});
-sub.addEventListener("click", () => {
-  if (quantity > 1) {
-    quantity--;
+if (adding && sub) {
+  adding.addEventListener("click", () => {
+    quantity++;
     numbers.textContent = quantity;
-  }
+  });
+  sub.addEventListener("click", () => {
+    if (quantity > 1) {
+      quantity--;
+      numbers.textContent = quantity;
+    }
+  });
+}
+
+const sizeButton = document.querySelectorAll("#sizeBtn");
+let selectedSize = "";
+
+if (sizeButton.length > 0) {
+  sizeButton.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      sizeButton.forEach((b) => {
+        b.style.backgroundColor = "";
+        b.style.color = "";
+      });
+      btn.style.backgroundColor = "#6D7F67";
+      btn.style.color = "white";
+      selectedSize = btn.textContent;
+      console.log("Selected size:", selectedSize);
+    });
+  });
+}
+
+const cartButton = document.querySelector("#cartBtn");
+if (cartButton) {
+  cartButton.addEventListener("click", () => {
+    if (!selectedSize) {
+      alert("Please select a size");
+      return;
+    }
+
+    const product = document.querySelector(".item");
+    const image = product.querySelector("#mainImg").src;
+    const title = product.querySelector("#heading").textContent;
+    const price = product.querySelector("#shirtPrice").textContent;
+
+    const newItem = {
+      image,
+      title,
+      price,
+      size: selectedSize,
+    };
+
+    const cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+    cart.push(newItem);
+    localStorage.setItem("cartItems", JSON.stringify(cart));
+
+    alert("Item added to cart!");
+    window.location.reload();
+  });
+}
+
+const container = document.querySelector(".orders");
+if (container) {
+  const cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+  const cartItems = container.querySelectorAll(".order");
+  cart.forEach((item, index) => {
+    const cartItem = cartItems[index];
+    if (cartItem) {
+      cartItem.querySelector(".cartImg").src = item.image;
+      cartItem.querySelector(".cartHead").textContent = item.title;
+      cartItem.querySelector(".cartPrice").textContent = item.price;
+      cartItem.querySelector(".cartSize").textContent = `Size: ${item.size}`;
+    }
+  });
+}
+
+const deleteButtons = container.querySelectorAll(".deleteBtn");
+
+deleteButtons.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    const cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+    cart.splice(index, 1);
+    localStorage.setItem("cartItems", JSON.stringify(cart));
+
+    const orderItem = btn.closest(".order");
+    if (orderItem) {
+      orderItem.remove();
+    }
+
+    const payment = document.querySelector(".payment");
+    if (payment) {
+      payment.style.display = "none";
+    }
+  });
 });
+
+const cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+let subtotal = 0;
+cart.forEach((item) => {
+  const price = parseFloat(item.price.replace("$", ""));
+  subtotal += price;
+});
+
+const deliveryFee = 15;
+const total = subtotal + deliveryFee;
+
+// Update DOM
+document.getElementById("subTotalPrice").textContent = subtotal;
+document.getElementById("finalPrice").textContent = total;
