@@ -70,6 +70,11 @@ if (login) {
     e.preventDefault();
     const email = document.querySelector("#mail").value;
     const password = document.querySelector("#pass").value;
+
+    if (!email || !password) {
+      alert("Please Input Email And Password");
+      return;
+    }
     signInWithEmailAndPassword(auth, email, password).then(
       async (userCredential) => {
         const user = userCredential.user;
