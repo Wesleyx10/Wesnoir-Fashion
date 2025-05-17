@@ -190,7 +190,7 @@ body {
 .items .carts .orderPayment .payment .finalTotal #finalPrice {
   font-weight: 600;
 }
-.items .carts .orderPayment .payment .checkoutBtn {
+.items .carts .orderPayment .payment #paymentBtn {
   background-color: var(--main-color);
   padding: 0.7rem;
   color: white;

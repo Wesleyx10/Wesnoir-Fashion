@@ -31,6 +31,7 @@ productLinks.forEach((link) => {
       const imageItem = product.querySelector(".tImg");
       const headerItem = product.querySelector(".tHead");
       const priceItem = product.querySelector(".tPrice");
+      const paymentLink = product.getAttribute("data-payment-link");
 
       if (imageItem && headerItem && priceItem) {
         const image = imageItem.src;
@@ -40,6 +41,8 @@ productLinks.forEach((link) => {
         localStorage.setItem("productImage", image);
         localStorage.setItem("productHeader", header);
         localStorage.setItem("productPrice", price);
+        localStorage.setItem("productPaymentLink", paymentLink);
+
         console.log("redirecting now......");
         window.location.href = "items.html";
       }
@@ -51,6 +54,7 @@ window.onload = () => {
   const img = localStorage.getItem("productImage");
   const title = localStorage.getItem("productHeader");
   const price = localStorage.getItem("productPrice");
+  const paymentLink = localStorage.getItem("productPaymentLink");
 
   const mainImg = document.querySelector("#mainImg");
   const heading = document.querySelector("#heading");
@@ -59,6 +63,9 @@ window.onload = () => {
   if (img && mainImg) mainImg.src = img;
   if (title && heading) heading.textContent = title;
   if (price && shirtPrice) shirtPrice.textContent = price;
+  if (paymentLink) {
+    localStorage.setItem("currentPaymentLink", paymentLink);
+  }
 };
 
 if (adding && sub) {
@@ -104,12 +111,14 @@ if (cartButton) {
     const image = product.querySelector("#mainImg").src;
     const title = product.querySelector("#heading").textContent;
     const price = product.querySelector("#shirtPrice").textContent;
+    const paymentLink = localStorage.getItem("currentPaymentLink");
 
     const newItem = {
       image,
       title,
       price,
       size: selectedSize,
+      paymentLink,
     };
 
     const cart = JSON.parse(localStorage.getItem("cartItems")) || [];
@@ -169,5 +178,6 @@ const deliveryFee = 15;
 const total = subtotal + deliveryFee;
 
 // Update DOM
-document.getElementById("subTotalPrice").textContent = subtotal;
-document.getElementById("finalPrice").textContent = total;
+document.getElementById("subTotalPrice").textContent = `$${subtotal}`;
+document.getElementById("finalPrice").textContent = `$${total}`;
+document.getElementById("deliveryPrice").textContent = `$${deliveryFee}`;
