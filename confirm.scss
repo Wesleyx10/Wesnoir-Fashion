@@ -45,6 +45,20 @@ a {
   font-family: var(--main-font);
   border: none;
 }
+@keyframes slideDownFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body > * {
+  animation: slideDownFade 1.2s ease-out;
+}
 
 @media only screen and (min-width: 0px) and (max-width: 500px) {
   .confirmMsg {
