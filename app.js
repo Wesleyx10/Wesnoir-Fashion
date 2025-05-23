@@ -177,7 +177,7 @@ cart.forEach((item) => {
 const deliveryFee = 15;
 const total = subtotal + deliveryFee;
 
-// Update DOM
+
 document.getElementById("subTotalPrice").textContent = `$${subtotal}`;
 document.getElementById("finalPrice").textContent = `$${total}`;
 document.getElementById("deliveryPrice").textContent = `$${deliveryFee}`;

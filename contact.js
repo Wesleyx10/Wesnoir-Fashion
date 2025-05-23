@@ -5,7 +5,6 @@ import {
   addDoc,
 } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-firestore.js";
 
-// Firebase Configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBG20no3XF_uFWu5RX-hkqS4YEjjxPYxgc",
   authDomain: "wesnoir-fashion.firebaseapp.com",
@@ -15,7 +14,6 @@ const firebaseConfig = {
   appId: "1:638215644793:web:7ba1eab7963d738f9f96a8",
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
@@ -32,7 +30,7 @@ if (button) {
     const message = document.querySelector("#message").value;
     const popup = document.querySelector("#popup");
 
-    // Check if all fields are filled
+ 
     if (!firstName || !secondName || !email || !number || !message) {
       alert("Please Fill In All Fields");
       return;
@@ -47,7 +45,6 @@ if (button) {
     };
 
     try {
-      // Firebase: Add feedback
       await addDoc(collection(db, "UserFeedback"), data);
       popup.style.opacity = 1;
       popup.style.right = "50px";
